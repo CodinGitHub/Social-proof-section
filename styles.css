@@ -1,3 +1,78 @@
+/* 
+Very Dark Magenta: hsl(300, 43%, 22%)
+Soft Pink: hsl(333, 80%, 67%)
+
+### Neutral
+
+Dark Grayish Magenta: hsl(303, 10%, 53%)
+Light Grayish Magenta: hsl(300, 24%, 96%)
+White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Spartan](https://fonts.google.com/specimen/Spartan)
+- Weights: 400, 500, 700
+*/
+
+body{
+    font-family: 'Spartan', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    background: url(images/bg-pattern-top-desktop.svg);
+    background-repeat: 1;
+    
+}
+.container{
+    width: 1080px;
+    margin: 50px auto;
+}
+h1{
+    color: hsl(300, 43%, 22%);
+    font-size: 40px;
+    font-weight: 900;
+}
+header{
+    border: 1px solid;
+    display: inline-block;
+    width: 49%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.stars{
+    border: 1px solid;
+    display: inline-block;
+    width: 50%;
+}
+.star{
+    border: 1px solid;
+    display: inline-block;
+    width: 70%;
+}
+.cards{
+    border: 1px solid;
+}
+.card1{
+    border: 1px solid;
+    display: inline-block;
+    width: 32%;
+}
+.card2{
+    border: 1px solid;
+    display: inline-block;
+    width: 32%;
+}
+.card3{
+    border: 1px solid;
+    display: inline-block;
+    width: 32%;
+}
 .attribution {
     font-size: 11px;
     text-align: center;
