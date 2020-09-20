@@ -57,20 +57,32 @@ h1{
     display: inline-block;
     box-sizing: border-box;
     padding: 30px;
+    color: hsl(0, 0%, 100%);
 }
 .cards img{
     border-radius: 50%;
     width: 50px;
 }
-.cards 
+.cards .job{
+    color: hsl(333, 80%, 67%);
+    position: relative;
+    left: -100px;
+}
+.cards .name{
+    position: relative;
+    top: -30px;
+    left: 15px;
+}
 .card1{
     
 }
 .card2{
-    
+    position: relative;
+    top: 50px;
 }
 .card3{
-    
+    position: relative;
+    top: 100px;
 }
 .attribution {
     font-size: 11px;
