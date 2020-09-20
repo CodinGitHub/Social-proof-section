@@ -8,7 +8,7 @@ body{
 }
 .container{
     width: 1440px;
-    margin: 50px auto;
+    margin: 100px auto;
 }
 header{
     border: 1px solid;
@@ -47,7 +47,7 @@ h1{
     margin-left: 70px;
 }
 .cardscontainer{
-    border: 1px solid;
+    margin-top: 100PX;
 }
 .cards{
     background-color: hsl(300, 43%, 22%);
