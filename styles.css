@@ -1,7 +1,7 @@
 body{
-    font-family: 'Spartan', sans-serif;
     margin: 0;
     padding: 0;
+    font-family: 'Spartan', sans-serif;
     font-size: 15px;
     background: url(images/bg-pattern-top-desktop.svg);
     background-repeat: none;
@@ -9,31 +9,39 @@ body{
 .container{
     width: 1440px;
     margin: 100px auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 350px 300px;
+    row-gap: 70px;
+    column-gap: 50px;
 }
 header{
     border: 1px solid;
-    display: inline-block;
-    width: 49%;
-    padding: 30px;
+    padding: 30px 120px;
     box-sizing: border-box;
 }
-h1{
+header h1{
     color: hsl(300, 43%, 22%);
-    font-size: 40px;
-    font-weight: 900;
+    font-size: 50px;
+    font-weight: 700; 
+}
+header p {
+    color: hsl(303, 10%, 53%);
+    font-size: 19px;
 }
 .starscontainer{
     border: 1px solid;
-    width: 40%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    padding: 10px 90px;
 }
 .stars{
     border-radius: 4px;
-    width: 450px;
+    width: 430px;
     background-color: hsl(300, 24%, 96%);
-    padding: 10px;
-    margin: 20px;
+    padding: 20px;
+    margin: 10px;
     font-weight: 700;
     color: hsl(300, 43%, 22%);
     box-sizing: border-box;
@@ -48,17 +56,21 @@ h1{
     align-self: flex-end;
 }
 .cardscontainer{
-    margin-top: 100PX;
+    border: 1px solid;
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: center;
+    padding: 10px 80px;
 }
 .cards{
     background-color: hsl(300, 43%, 22%);
     border-radius: 10px;
-    margin: 10px;
+    margin: 15px;
     width: 30%;
-    display: inline-block;
     box-sizing: border-box;
     padding: 30px;
-    color: hsl(0, 0%, 100%);
+    color: hsl(300, 24%, 96%);
+    font-weight: 500;
 }
 .cards img{
     border-radius: 50%;
@@ -67,28 +79,31 @@ h1{
 .cards .job{
     color: hsl(333, 80%, 67%);
     position: relative;
-    left: -100px;
+    left: -75px;
+    top: -10px;
 }
 .cards .name{
     position: relative;
     top: -30px;
     left: 15px;
+    font-weight: 700;
 }
 .card1{
-    
+    align-self: flex-start;
 }
 .card2{
-    position: relative;
-    top: 50px;
+    align-self: center;
 }
 .card3{
-    position: relative;
-    top: 100px;
+    align-self: flex-end;
+}
+footer{
+    grid-column: 1 / span 2;
 }
 .attribution {
     font-size: 11px;
-    text-align: center;
-  }
-  .attribution a {
+    text-align: center; 
+}
+.attribution a {
     color: hsl(228, 45%, 44%);
-  }
+}
