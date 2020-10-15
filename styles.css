@@ -10,15 +10,22 @@ body{
     width: 1440px;
     margin: 100px auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(700px, 1çfr));
-    grid-template-rows: 350px 300px;
+    grid-template-areas: 
+        'HEADER STAR'
+        'CARD   CARD'
+        'FOOTER FOOTER'
+    ;
+    /* grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+    grid-template-rows: 350px 300px; */
     row-gap: 70px;
     column-gap: 50px;
 }
+/*----------------HEADER----------------*/
 header{
     border: 1px solid;
     padding: 2% 16%;
     box-sizing: border-box;
+    grid-area: HEADER;
 }
 header h1{
     color: hsl(300, 43%, 22%);
@@ -29,12 +36,14 @@ header p {
     color: hsl(303, 10%, 53%);
     font-size: 19px;
 }
+/*----------------STARS----------------*/
 .starscontainer{
     border: 1px solid;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 10px 90px;
+    grid-area: STAR;
 }
 .stars{
     border-radius: 4px;
@@ -55,11 +64,13 @@ header p {
 .star3{
     align-self: flex-end;
 }
+/*----------------CARDS----------------*/
 .cardscontainer{
     border: 1px solid;
     display: flex;
     justify-content: center;
     padding: 10px 80px;
+    grid-area: CARD;
 }
 .cards{
     background-color: hsl(300, 43%, 22%);
@@ -104,5 +115,5 @@ header p {
     color: hsl(228, 45%, 44%);
 }
 footer{
-    grid-area: four;
+    grid-area: FOOTER;
 }
