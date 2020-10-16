@@ -1,22 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
 body{
     margin: 0;
     padding: 0;
     font-family: 'Spartan', sans-serif;
     font-size: 15px;
+    font-weight: 500;
     background: url(images/bg-pattern-top-desktop.svg);
-    background-repeat: none;
+    background-repeat: no-repeat;
 }
 .container{
-    width: 1440px;
+    max-width: 1440px;
     margin: 100px auto;
     display: grid;
-    grid-template-areas: 
-        'HEADER STAR'
-        'CARD   CARD'
-        'FOOTER FOOTER'
-    ;
-    /* grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
-    grid-template-rows: 350px 300px; */
+    grid-template-columns: 1fr 1fr;
     row-gap: 70px;
     column-gap: 50px;
 }
@@ -25,16 +21,17 @@ header{
     border: 1px solid;
     padding: 2% 16%;
     box-sizing: border-box;
-    grid-area: HEADER;
 }
 header h1{
     color: hsl(300, 43%, 22%);
     font-size: 50px;
     font-weight: 700; 
+    line-height: 50px;
+    margin-bottom: 10px;
 }
 header p {
     color: hsl(303, 10%, 53%);
-    font-size: 19px;
+    line-height: 25px;
 }
 /*----------------STARS----------------*/
 .starscontainer{
@@ -42,18 +39,18 @@ header p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px 90px;
-    grid-area: STAR;
+    padding: 10px 80px;
 }
 .stars{
     border-radius: 4px;
     width: 430px;
     background-color: hsl(300, 24%, 96%);
-    padding: 20px;
-    margin: 10px;
+    padding: 15px 20px;
+    margin: 8px;
     font-weight: 700;
     color: hsl(300, 43%, 22%);
     box-sizing: border-box;
+    height: 50px;
 }
 .stars span{
     margin-left: 30px;
@@ -69,33 +66,40 @@ header p {
     border: 1px solid;
     display: flex;
     justify-content: center;
-    padding: 10px 80px;
-    grid-area: CARD;
+    padding: 0 6%;
+    grid-column: 1/-1;
+    height: 320px;
 }
 .cards{
     background-color: hsl(300, 43%, 22%);
     border-radius: 10px;
     margin: 15px;
-    width: 30%;
+    max-width: 400px;
     box-sizing: border-box;
-    padding: 30px;
+    padding: 40px;
     color: hsl(300, 24%, 96%);
-    font-weight: 500;
+    height: 250px;
+    font-size: 14px;
 }
 .cards img{
     border-radius: 50%;
     width: 50px;
+    margin-right: 20px;
+}
+.cards p{
+    font-weight: 500;
+    line-height: 23px;
 }
 .cards .job{
     color: hsl(333, 80%, 67%);
     position: relative;
-    left: -75px;
-    top: -10px;
+    font-weight: 400;
+    top: -8px;
 }
 .cards .name{
     position: relative;
     top: -30px;
-    left: 15px;
+    left: -108px;
     font-weight: 700;
 }
 .card1{
@@ -107,6 +111,7 @@ header p {
 .card3{
     align-self: flex-end;
 }
+/*---------------------FOOTER---------------------------*/
 .attribution {
     font-size: 11px;
     text-align: center; 
@@ -115,5 +120,16 @@ header p {
     color: hsl(228, 45%, 44%);
 }
 footer{
-    grid-area: FOOTER;
+    grid-column: 1/-1;
+}
+/*---------------------------Responsive-------------------------*/
+@media only screen and (max-width: 375px) {
+    .container{
+        grid-template-columns: 1fr;
+    }
+    .cardscontainer{
+        padding: 10px 10px;
+        flex-direction: column;
+    }
+ 
 }
