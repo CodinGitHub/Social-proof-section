@@ -80,26 +80,24 @@ header p {
     color: hsl(300, 24%, 96%);
     height: 250px;
     font-size: 14px;
+    display: grid;
+    grid-template-columns: 1fr 10fr;
 }
 .cards img{
     border-radius: 50%;
     width: 50px;
     margin-right: 20px;
+    grid-row: 1 / 3;
 }
 .cards p{
     font-weight: 500;
     line-height: 23px;
+    grid-column: 1 / 3;
 }
 .cards .job{
     color: hsl(333, 80%, 67%);
-    position: relative;
-    font-weight: 400;
-    top: -8px;
 }
 .cards .name{
-    position: relative;
-    top: -30px;
-    left: -108px;
     font-weight: 700;
 }
 .card1{
