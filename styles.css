@@ -16,12 +16,13 @@ body{
     max-width: 1114px;
     margin: 100px auto;
     display: grid;
-    grid-template-columns: 432px 1fr;
+    grid-template-columns: repeat(12, 1fr);
     row-gap: 70px;
 }
 /*----------------HEADER----------------*/
 header{
     border: 1px solid;
+    grid-column: 1 / 5;
 }
 header h1{
     color: hsl(300, 43%, 22%);
@@ -42,13 +43,12 @@ header p {
     justify-content: center;
     padding: 10px 0;
     border: 1px solid;
-    justify-self: end;
-    min-width: 540px;
+    grid-column: 7 / 13;
 }
 .stars{
     border: 1px solid;
     border-radius: 4px;
-    width: 445px;
+    max-width: 445px;
     background-color: hsl(300, 24%, 96%);
     padding: 10px 80px 10px 20px;
     margin: 8px 0;
@@ -56,11 +56,20 @@ header p {
     color: hsl(300, 43%, 22%);
     height: 55px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
-.stars span{
-    margin-left: 0px;
+.stars .fivestars{
+    min-width: 110px;
+    border: 1px solid;
+}
+.stars .text{
+    margin-left: 10px;
+    min-width: 240px;
+    border: 1px solid;
+}
+.star1{
+    align-self: flex-start;
 }
 .star2{
     align-self: center;
@@ -125,18 +134,30 @@ footer{
     grid-column: 1/-1;
 }
 
-@media only screen and (max-width: 1054px) {
+@media only screen and (max-width: 1080px) {
+    header{
+        grid-column: 1 / 6;
+    }
     .cardscontainer{
         flex-direction: column;
         align-items: center;
     }
-    .card1{
+    .cards{
         margin: 10px 0;
     }
     .card1{
+        align-self: flex-start;
+    }
+    .card2{
         align-self: center;
     }
     .card3{
-        align-self: center;
+        align-self: flex-end;
     }
+}
+@media only screen and (max-width: 894px) {
+    .stars{
+        flex-direction: column;
+        padding: 10px;
+    }  
 }
