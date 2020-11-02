@@ -180,20 +180,6 @@ header p {
     .starscontainer{
         grid-column: 6/-1;
     }
-    /* .stars{
-        flex-direction: row;
-        width: 444px;
-        justify-content: center;
-    } */
-    /* .star1{
-        align-self: flex-start;
-    }
-    .star2{
-        align-self: center;
-    }
-    .star3{
-        align-self: flex-end;
-    } */
     .cardscontainer{
         grid-column: 1/-1;
     }
@@ -253,3 +239,4 @@ header p {
         padding: 0;
     }
 }
+
